@@ -1,6 +1,6 @@
-var Libro = Backbone.Model.extend(
+var Proyecto = Backbone.Model.extend(
 	{
-		urlRoot:'/libros',
+		urlRoot:'/proyectos',
 
 		initialize: function()
 		{
@@ -21,7 +21,7 @@ var Libro = Backbone.Model.extend(
 		},
 		defaults:
 		{
-			autor:'Desconocido'
+			//autor:'Desconocido'
 		}
 	});
 

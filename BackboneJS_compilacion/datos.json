@@ -1,26 +1,38 @@
 [
   {
     "id": "1",
-    "titulo": "Los perros hambrientos",
-    "autor": "Ciro Alegria",
-    "categoria": "Literatura"
+    "titulo": "Helen Moore VR",
+    "plataforma": "IOS, Google Cardboard",
+    "origen": "England"
   },
   {
     "id": "2",
-    "titulo": "Developing Backbone.js Applications",
-    "autor": "Addy Osmani",
-    "categoria": "Tecnologia"
+    "titulo": "Sage And y Riski Lavango",
+    "plataforma": "Web",
+    "origen": "Andorra"
   },
   {
     "id": "3",
-    "titulo": "La meta",
-    "autor": "Eliyahu Goldratt",
-    "categoria": "Negocios"
+    "titulo": "Burbujas",
+    "plataforma": "Android",
+    "origen": "Peru"
   },
   {
     "id": "4",
-    "titulo": "Los heraldos negros",
-    "autor": "Cesar Vallejo",
-    "categoria": "Poesia"
-  }
+    "titulo": "Jumpin' Jacks",
+    "plataforma": "iOS",
+    "origen": "USA"
+  },
+  {
+    "id":"5",
+    "titulo":"Tap Lights",
+    "plataforma": "iOS",
+    "origen": "Australia"
+  },
+  {
+    "id": "6",
+    "titulo": "Kids Learn Vocabulary",
+    "plataforma": "Android",
+    "origen": "Argentina"
+  } 
 ]

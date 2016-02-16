@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Curso Básico de Backbone.js</title>
+	<title>Compilado de cosas Backbone.js</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	
 	<style>
@@ -11,16 +11,29 @@
 		}
 	</style>
 </head>
-<body>
+<body id="app">
 
-	<p>Bienvenidos al Curso básico de Backbone.js</p>
-
-	<small>Producido por @Devcodela</small>
+	<div class="proyectos">
+		<h1>Portafolio de Proyectos Realizados</h1>
+	</div>
 	
+	<!-- Aqui estoy definiendo el template 
+			titulo, plataforma y origen son variables
+	-->
+	<script type="text/template" id="tplMostrarProyecto">
+	<h2><%= titulo %></h2>
+	<p><%= plataforma %></p>
+	<small><%= origen %></small>
+	<hr>
+	</script>
+
 	<script type="text/javascript" src="js/vendor/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="js/vendor/underscore-min.js"></script>
 	<script type="text/javascript" src="js/vendor/backbone-min.js"></script>
-	<script type="text/javascript" src="js/backbone/models/libro.js"></script>
+	<script type="text/javascript" src="js/backbone/models/proyecto.js"></script>
+	<script type="text/javascript" src="js/backbone/collections/proyectos.js"></script>
+	<script type="text/javascript" src="js/backbone/views/maletin.js"></script>
+	<script type="text/javascript" src="js/backbone/routes/rutas.js"></script>
 	
 </body>
 </html>

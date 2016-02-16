@@ -8,6 +8,7 @@ var app = express(),
 
 var datos = JSON.parse(baseDeDatos);
 
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Add POST, PUT, DELETE methods to the app
@@ -22,19 +23,19 @@ app.get('/', function (req,res){
 
 // API REST
 
-// Mostrar todos los libros
-app.get('/libros', function(req,res) {
+// Mostrar todos los proyectos
+app.get('/proyectos', function(req,res) {
 	res.send(datos);
 });
 
-// Mostrar el detalle de un libro
-app.get('/libros/:id', function(req,res,next) {
+// Mostrar el detalle de un proyecto
+app.get('/proyecto/:id', function(req,res,next) {
 	var dato;
 
 	for ( var i=0; i<datos.length; i++ ) {
-		var libro = datos[i];
+		var proyecto = datos[i];
 
-		if (libro.id === req.params.id) {
+		if (proyecto.id === req.params.id) {
 			dato = libro;
 		}
 	}
@@ -48,8 +49,8 @@ app.get('/libros/:id', function(req,res,next) {
 
 });
 
-// POST: crear un nuevo libro.
-app.post('/libros', function (req, res){
+// POST: crear un nuevo proyecto.
+app.post('/proyectos', function (req, res){
 	req.body.id = uuid.v1(4);
 
 	datos.push(req.body);
@@ -57,14 +58,14 @@ app.post('/libros', function (req, res){
 	res.send(200, {id: req.body.id});
 });
 
-// PUT: Actualizar un libro.
-app.put('/libros/:id', function (req, res){
-	var libro;
+// PUT: Actualizar un proyecto.
+app.put('/proyectos/:id', function (req, res){
+	var proyecto;
 
 	for (var i = datos.length - 1; i >= 0; i--) {
-		libro = datos[i];
+		proyecto = datos[i];
 
-		if(libro.id === req.params.id){
+		if(proyecto.id === req.params.id){
 			datos[i] = req.body;
 		}
 	}
@@ -72,15 +73,15 @@ app.put('/libros/:id', function (req, res){
 	res.send(200);
 });
 
-// DELETE: Eliminar un libro.
-app.delete('/libros/:id', function (req,res) {
+// DELETE: Eliminar un proyecto.
+app.delete('/proyectos/:id', function (req,res) {
 
 	var elementoEliminar;
 
 	for ( var i=0; i<datos.length; i++ ) {
-		var libro = datos[i];
+		var proyecto = datos[i];
 
-		if (libro.id === req.params.id) {
+		if (proyecto.id === req.params.id) {
 			elementoEliminar = i;
 		}
 	}
